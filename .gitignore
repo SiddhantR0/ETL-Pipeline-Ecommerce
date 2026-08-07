@@ -1,0 +1,9 @@
+# Credentials
+.kaggle/kaggle.json
+
+# Data folders
+data/raw/
+data/processed/
+
+# Venv
+.venv/
