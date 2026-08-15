@@ -1,5 +1,6 @@
 kaggle==1.6.6
 pandas>=2.2.3
+numpy>=1.26.0
 sqlalchemy==2.0.27
 psycopg[binary]>=3.0
 python-dotenv==1.0.1
