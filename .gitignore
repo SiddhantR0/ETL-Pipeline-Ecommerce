@@ -7,3 +7,6 @@ data/processed/
 
 # Venv
 .venv/
+
+# Python Cache
+__pycache__/
