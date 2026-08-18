@@ -68,7 +68,6 @@ def clean_sellers_data():
             return 'Unknown'
 
     if "seller_state" in df.columns:
-        print("Mapping seller states to Brazilian macro-regions...")
         df["seller_region"] = df["seller_state"].apply(map_brazilian_regions)
 
     # Flagging Unknown Cities
