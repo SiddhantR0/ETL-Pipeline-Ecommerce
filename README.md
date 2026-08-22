@@ -1,21 +1,81 @@
-# ETL Pipeline for Olist Brazillian Ecommerce Business 
+# Olist E-Commerce ETL Pipeline
 
-# About the Project
-This ETL Pipeline is for the Olist Brazillian Ecommerce Dataset. Here, there's the code to extract the raw dataset from kaggle.com and then unzip it and then place it inside a folder. This is the E or 'Extract' part of the ETL pipeline. Then the raw dataset is transformed into a clean and structred dataset which includes additional information about the dataset that is to be required in the future. Then the cleaned csv file of the dataset is loaded into a database for easier data analysis.
+<div align="center">
 
-# Folder Structure 
-data/raw : raw unprocessed csv files after unzipping
-data/processed : processed files after transforming
-sql/ : contains sql part for the project
-src/ : contains the python files used
-main.py : has the main code for running 
-
-# Setup 
--> Clone the Repository using "git clone" 
--> Create and activate the Virtual Environment:
-   = python -m venv venv
-   = venv\Sceipts\activate 
--> Install the dependencies:
-   = pip install -r requirements.txt
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualizations-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 
+</div>
+
+---
+
+## Overview
+
+This project implements a fully automated, production-grade **ETL (Extract, Transform, Load)** pipeline coupled with a multi-domain **Business Intelligence & Analytics suite**. Built around the Olist Brazilian E-Commerce dataset, the system cleans raw relational data, normalizes it into a local SQLite data warehouse, and generates executive-ready 4-panel visual dashboards tracking core business KPIs.
+
+---
+
+---
+
+## Analytical Insights & Dashboards
+
+The pipeline automatically compiles and plots multi-metric Seaborn dashboards saved under data/output/:
+
+Logistics & Delivery Performance: Evaluates carrier transit times, delivery delays, and fulfillment bottlenecks.
+
+Products & Revenue Concentration: Identifies top-performing product categories, revenue drivers, and volumetric weight distributions.
+
+Payment Behaviors: Analyzes installment trends, preferred transaction types, and payment value distributions.
+
+Seller Performance: Ranks regional merchant efficiency and delivery compliance.
+
+Customer Geography: Maps state-by-state customer distribution, macro-region shares (Southeast, South, Northeast, etc.), and city concentrations.
+
+Geolocation Spatial Density: Spatial mapping of zip-code coordinates across Brazil.
+
+---
+
+---
+
+## Getting Started & Installation
+
+1. Clone the Repository
+
+git clone [https://github.com/your-username/ETL_Pipeline.git](https://github.com/your-username/ETL_Pipeline.git)
+cd ETL_Pipeline
+
+2. Set Up Virtual Environment
+
+python -m venv venv
+venv\Scripts\activate
+
+3. Install Dependencies
+
+pip install -r requirements.txt
+
+---
+
+---
+
+## Execution
+
+python main.py
+
+---
+
+---
+
+## Built With
+
+Python: Core pipeline orchestration and data manipulation.
+
+Pandas & NumPy: Data cleaning, transformation, and numerical aggregation.
+
+SQLite & SQL: Relational database storage and querying.
+
+Matplotlib & Seaborn: Automated executive reporting and multi-panel data visualization.
+
+---
