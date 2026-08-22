@@ -4,9 +4,14 @@
 # Data folders
 data/raw/
 data/processed/
+data/database/
+data/output/
 
 # Venv
 .venv/
+venv/
 
 # Python Cache
 __pycache__/
+*.py[cod]
+*$py.class
