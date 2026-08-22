@@ -18,8 +18,6 @@ This project implements a fully automated, production-grade **ETL (Extract, Tran
 
 ---
 
----
-
 ## Analytical Insights & Dashboards
 
 The pipeline automatically compiles and plots multi-metric Seaborn dashboards saved under data/output/:
@@ -35,8 +33,6 @@ Seller Performance: Ranks regional merchant efficiency and delivery compliance.
 Customer Geography: Maps state-by-state customer distribution, macro-region shares (Southeast, South, Northeast, etc.), and city concentrations.
 
 Geolocation Spatial Density: Spatial mapping of zip-code coordinates across Brazil.
-
----
 
 ---
 
@@ -58,13 +54,9 @@ pip install -r requirements.txt
 
 ---
 
----
-
 ## Execution
 
 python main.py
-
----
 
 ---
 
