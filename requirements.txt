@@ -4,3 +4,5 @@ numpy==1.26.4
 sqlalchemy==2.0.27
 psycopg[binary]>=3.0
 python-dotenv==1.0.1
+matplotlib
+seaborn
