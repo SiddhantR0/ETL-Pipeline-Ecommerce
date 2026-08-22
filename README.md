@@ -19,7 +19,7 @@ This project implements a fully automated, production-grade **ETL (Extract, Tran
 
 ## Analytical Insights & Dashboards
 
-The pipeline automatically compiles and plots multi-metric Seaborn dashboards saved under **data/output/**:
+The pipeline automatically compiles and plots multi-metric Seaborn dashboards saved under `data/output/`:
 
 - **Logistics & Delivery Performance** — Evaluates carrier transit times, delivery delays, and fulfillment bottlenecks.
 - **Products & Revenue Concentration** — Identifies top-performing product categories, revenue drivers, and volumetric weight distributions.
@@ -46,6 +46,8 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+> On macOS/Linux, use `source venv/bin/activate` instead.
+
 ### 3. Install Dependencies
 
 ```bash
@@ -62,11 +64,27 @@ python main.py
 
 ---
 
+## Run with Docker
+
+If you prefer not to install Python and dependencies locally, you can run the entire pipeline inside a container using Docker.
+
+### Prerequisites
+
+Make sure you have **Docker** and **Docker Compose** installed on your system.
+
+### Build and Execute
+
+Run the following command from the root directory of the project:
+
+```bash
+docker compose up --build
+```
+
+---
+
 ## Built With
 
 - **Python** — Core pipeline orchestration and data manipulation.
 - **Pandas & NumPy** — Data cleaning, transformation, and numerical aggregation.
 - **SQLite & SQL** — Relational database storage and querying.
-- **Matplotlib & Seaborn** — Executive reporting and data visualization.
-
----
+- **Matplotlib & Seaborn** — Automated executive reporting and multi-panel data visualization.
