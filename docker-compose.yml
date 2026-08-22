@@ -1,0 +1,8 @@
+services:
+  etl-pipeline:
+    build: .
+    container_name: olist_etl_container
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
