@@ -7,7 +7,6 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/Seaborn-Visualizations-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-
 </div>
 
 ---
@@ -20,54 +19,54 @@ This project implements a fully automated, production-grade **ETL (Extract, Tran
 
 ## Analytical Insights & Dashboards
 
-The pipeline automatically compiles and plots multi-metric Seaborn dashboards saved under data/output/:
+The pipeline automatically compiles and plots multi-metric Seaborn dashboards saved under `data/output/`:
 
-Logistics & Delivery Performance: Evaluates carrier transit times, delivery delays, and fulfillment bottlenecks.
-
-Products & Revenue Concentration: Identifies top-performing product categories, revenue drivers, and volumetric weight distributions.
-
-Payment Behaviors: Analyzes installment trends, preferred transaction types, and payment value distributions.
-
-Seller Performance: Ranks regional merchant efficiency and delivery compliance.
-
-Customer Geography: Maps state-by-state customer distribution, macro-region shares (Southeast, South, Northeast, etc.), and city concentrations.
-
-Geolocation Spatial Density: Spatial mapping of zip-code coordinates across Brazil.
+- **Logistics & Delivery Performance** — Evaluates carrier transit times, delivery delays, and fulfillment bottlenecks.
+- **Products & Revenue Concentration** — Identifies top-performing product categories, revenue drivers, and volumetric weight distributions.
+- **Payment Behaviors** — Analyzes installment trends, preferred transaction types, and payment value distributions.
+- **Seller Performance** — Ranks regional merchant efficiency and delivery compliance.
+- **Customer Geography** — Maps state-by-state customer distribution, macro-region shares (Southeast, South, Northeast, etc.), and city concentrations.
+- **Geolocation Spatial Density** — Spatial mapping of zip-code coordinates across Brazil.
 
 ---
 
 ## Getting Started & Installation
 
-1. Clone the Repository
+### 1. Clone the Repository
 
-git clone [https://github.com/your-username/ETL_Pipeline.git](https://github.com/your-username/ETL_Pipeline.git)
+```bash
+git clone https://github.com/your-username/ETL_Pipeline.git
 cd ETL_Pipeline
+```
 
-2. Set Up Virtual Environment
+### 2. Set Up a Virtual Environment
 
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-3. Install Dependencies
+> On macOS/Linux, use `source venv/bin/activate` instead.
 
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
 ## Execution
 
+```bash
 python main.py
+```
 
 ---
 
 ## Built With
 
-Python: Core pipeline orchestration and data manipulation.
-
-Pandas & NumPy: Data cleaning, transformation, and numerical aggregation.
-
-SQLite & SQL: Relational database storage and querying.
-
-Matplotlib & Seaborn: Automated executive reporting and multi-panel data visualization.
-
----
+- **Python** — Core pipeline orchestration and data manipulation.
+- **Pandas & NumPy** — Data cleaning, transformation, and numerical aggregation.
+- **SQLite & SQL** — Relational database storage and querying.
+- **Matplotlib & Seaborn** — Executive reporting and data visualization.
