@@ -39,16 +39,26 @@ git clone https://github.com/your-username/ETL_Pipeline.git
 cd ETL_Pipeline
 ```
 
-### 2. Set Up a Virtual Environment
+### 2. Set Up Kaggle Credentials
+
+To allow the pipeline to automatically download the Olist dataset, you need to provide your Kaggle API keys.
+
+1. Log in to Kaggle, go to **Settings -> API**, and click **Create New Token**. This will download a `kaggle.json` file containing your username and key.
+2. In the root directory of this cloned project, create a file named `.env`.
+3. Add your credentials to the `.env` file like this:
+
+```env
+KAGGLE_USERNAME=your_kaggle_username
+KAGGLE_KEY=your_kaggle_key
+```
+
+### 3. Set Up a Virtual Environment
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
-
-> On macOS/Linux, use `source venv/bin/activate` instead.
-
-### 3. Install Dependencies
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
