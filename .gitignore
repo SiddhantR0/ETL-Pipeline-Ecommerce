@@ -6,6 +6,8 @@ data/raw/
 data/processed/
 data/database/
 data/output/
+data/raw/*.csv
+!data/raw/olist_data.tar.gz
 
 # Venv
 .venv/

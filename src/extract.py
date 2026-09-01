@@ -1,9 +1,7 @@
-# Importing
 import os
-import zipfile
-from kaggle.api.kaggle_api_extended import KaggleApi
+import tarfile
+import logging
 
-# Extracting Data
 def extract_data():
     raw_dir = "data/raw"
     os.makedirs(raw_dir, exist_ok=True)
@@ -18,32 +16,23 @@ def extract_data():
         "olist_products_dataset.csv",
         "olist_sellers_dataset.csv"
     ]
-
+    
     all_files_exist = all(os.path.exists(os.path.join(raw_dir, f)) for f in expected_files)
 
     if all_files_exist:
-        print("All Datasets Already Exists")
+        logging.info("Raw datasets already extracted. Skipping.")
         return
 
-    # Authenticating w/ Kaggle API
-    print("Authenticating with Kaggle API")
-    api = KaggleApi()
-    api.authenticate()
-
-    # Downloading Dataset
-    print("Downloading Dataset From Kaggle")
-    api.dataset_download_files('olistbr/brazilian-ecommerce',path= raw_dir, unzip=False)
-
-    # Unzipping Dataset
-    zip_path = os.path.join(raw_dir,"brazilian-ecommerce.zip")
-    if os.path.exists(zip_path):
-        print("Extracting Zip File")
-        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-            zip_ref.extractall(raw_dir)
-        os.remove(zip_path)
-        print("Extraction Complete")
+    tar_path = os.path.join(raw_dir, "olist_data.tar.gz")
+    
+    if os.path.exists(tar_path):
+        logging.info("Local tarball found. Extracting data...")
+        with tarfile.open(tar_path, "r:gz") as tar_ref:
+            tar_ref.extractall(path=raw_dir)
+        logging.info("Extraction Complete!")
     else:
-        raise FileNotFoundError("Zip File Not Found")
+        logging.error("Fatal: olist_data.tar.gz not found in data/raw/")
+        raise FileNotFoundError("olist_data.tar.gz is missing from the repository.")
 
 if __name__ == "__main__": 
     extract_data()
